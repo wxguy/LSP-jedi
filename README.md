@@ -13,6 +13,14 @@ To use this package, you must have:
 
 This language server operates on views with the `source.python` base scope.
 
+## Installation
+
+The plugin is not yet available in Package Control. Till then, you can use the following command under Linux:-
+
+git clone https://github.com/wxguy/LSP-jedi.git ~/.config/sublime-text/Packages/LSP-jedi
+
+You may need to adopt or change the path according to your OS.
+
 ## Installation Location
 
 The server is installed in the `$CACHE/Package Storage/LSP-jedi` directory, where `$CACHE` is the base data path of Sublime Text.
