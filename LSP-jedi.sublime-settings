@@ -1,0 +1,76 @@
+// This file is read-only and lives in
+//
+//    $DATA/Installed Packages/LSP-jedi.sublime-package
+//
+// Provided you installed this package through Package Control. To modify one
+// of these settings, you should see a template file to your right where you
+// can override various key-value pairs.
+//
+// It is safe to partially override the "settings" key. All the option of jedi-language-server are provided in
+// the official link at https://github.com/pappasam/jedi-language-server
+//
+//
+// You must then *save* the *right* view in
+// $DATA/Packages/User/LSP-jedi.sublime-settings.
+{
+    // Defines the Python interpreter to use for creating an environment in which `jedi-language-serever` will run.
+    // The value can be set to a binary name (like `python`, in which case a binary with that name needs to be present
+    // on the PATH) or a full path to the Python interpreter binary.
+    // When the value is `null` then it defaults to `python` on Windows and `python3` on other platforms.
+    "python_binary": null,
+    "env": {
+        // Override PYTHONPATH to extend the paths that jedi searches when looking for stub files.
+        // Paths have to be specified in two places so that Jedi can pick up types and stubs.
+        "PYTHONPATH": "${sublime_py_files_dir}${pathsep}${packages}",
+        "MYPYPATH": "${sublime_py_files_dir}${pathsep}${packages}"
+        },
+      "settings": {
+        "initializationOptions": {
+          "codeAction": {
+            "nameExtractVariable": "jls_extract_var",
+            "nameExtractFunction": "jls_extract_def"
+          },
+          "completion": {
+            "disableSnippets": false,
+            "resolveEagerly": false,
+            "ignorePatterns": []
+          },
+          "diagnostics": {
+            "enable": false,
+            "didOpen": true,
+            "didChange": true,
+            "didSave": true
+          },
+          "hover": {
+            "enable": true,
+            "disable": {
+              "class": { "all": false, "names": [], "fullNames": [] },
+              "function": { "all": false, "names": [], "fullNames": [] },
+              "instance": { "all": false, "names": [], "fullNames": [] },
+              "keyword": { "all": false, "names": [], "fullNames": [] },
+              "module": { "all": false, "names": [], "fullNames": [] },
+              "param": { "all": false, "names": [], "fullNames": [] },
+              "path": { "all": false, "names": [], "fullNames": [] },
+              "property": { "all": false, "names": [], "fullNames": [] },
+              "statement": { "all": false, "names": [], "fullNames": [] }
+            }
+          },
+          "jediSettings": {
+            "autoImportModules": ["numpy", "pandas"],
+            "caseInsensitiveCompletion": true,
+            "debug": false
+          },
+          "markupKindPreferred": "markdown",
+          "workspace": {
+            "extraPaths": [],
+            "environmentPath": "/home/sundar/miniconda3/envs",
+            "symbols": {
+              "ignoreFolders": [".nox", ".tox", ".venv", "__pycache__", "venv"],
+              "maxSymbols": 20
+          }
+        }
+      }
+    },
+    "command": ["$server_path"],
+    "selector": "source.python"
+}

@@ -1,0 +1,38 @@
+{
+  "contributions": {
+    "settings": [
+      {
+        "file_patterns": [
+          "/LSP-jedi.sublime-settings"
+        ],
+        "schema": {
+          "$id": "sublime://settings/LSP-jedi",
+          "definitions": {
+            "PluginConfig": {
+              "properties": {
+                "settings": {
+                  "properties": {
+                    "jedi.executable": {
+                      "type": "string",
+                      "default": "jedi-language-server",
+                      "description": "Language server executable"
+                    },
+                    
+                    "jediSettings.autoImportModules": {
+                      "type": "array",
+                      "default": ["numpy", "pandas", "matplotlib"],
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "List of module names for jediSettings.autoImportModules."
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    ]
+    },
+  }

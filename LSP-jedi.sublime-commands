@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Preferences: LSP-jedi Settings",
+        "command": "edit_settings",
+        "args": {
+            "base_file": "${packages}/LSP-jedi/LSP-jedi.sublime-settings",
+            "default": "// Settings in here override those in \"LSP-jedi/LSP-jedi.sublime-settings\"\n{\n\t$0\n}\n"
+        }
+    }
+]
