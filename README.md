@@ -1,9 +1,9 @@
 # LSP-jedi
 
-This is a helper package that automatically installs and updates the
-[Jedi LSP Server](https://github.com/pappasam/jedi-language-server) (jedi-language-server).
+This is a helper Sublime Text plugin that automatically installs and updates the
+[Jedi LSP Server](https://github.com/pappasam/jedi-language-server) (jedi-language-server) for Sublime Text.
 
-To use this package, you must have:
+To use this package, you must have:-
 
 - An executable `python` (on Windows) or `python3` (on Linux/macOS)
 - The [LSP](https://packagecontrol.io/packages/LSP) package
@@ -11,13 +11,15 @@ To use this package, you must have:
 
 ## Applicable Selectors
 
-This language server operates on views with the `source.python` base scope.
+This language server operates on views with the `source.python` base scope. Meaning that it will only work for Python files.
 
 ## Installation
 
 The plugin is not yet available in Package Control. Till then, you can use the following command under Linux:-
 
+```bash
 git clone https://github.com/wxguy/LSP-jedi.git ~/.config/sublime-text/Packages/LSP-jedi
+```
 
 You may need to adopt or change the path according to your OS.
 
@@ -89,5 +91,4 @@ How to tweak the configuration is listed at official [jedi-language-server](http
 
 ## Additional Package
 
-The jedi-language-serve only provides auto-completion for Python files. If you wish to have additional features such as formatting, linting etc., it is highly recommended to install [LSP-ruff](https://packagecontrol.io/packages/LSP-ruff). 
-
+The `jedi-language-serve` only provides auto-completion for Python files. If you wish to have additional features such as formatting, linting etc., it is highly recommended to install [LSP-ruff](https://packagecontrol.io/packages/LSP-ruff). In addition, if you want type-checking feature similar to `pyright` then it is recommended to install [mypy plugin](https://packagecontrol.io/packages/SublimeLinter-mypy) as well. 
